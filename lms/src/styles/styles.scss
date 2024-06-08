@@ -1,0 +1,681 @@
+  // CourseList Component Styles
+  .course-list-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+  }
+  
+  .course-item {
+    width: calc(50% - 20px); /* Adjust the width as needed */
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 10px; /* Adjust the margin as needed */
+    transition: box-shadow 0.3s ease-in-out;
+    max-width: 400px; /* Adjust the maximum width as needed */
+  }
+  
+  .course-item:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  .course-item:nth-child(odd) {
+    background-color: #f7e7e7; /* Light gray background for odd items */
+  }
+  
+  .course-item:nth-child(even) {
+    background-color: #caf3f7; /* Lighter gray background for even items */
+  }
+  .course-info {
+    cursor: pointer;
+  }
+  
+  .course-title {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 5px;
+  }
+  
+  .course-description {
+    color: #666;
+    margin-bottom: 10px;
+  }
+  
+  .course-progress {
+    color: #888;
+  }
+  
+  .admin-buttons {
+    display: flex;
+    gap: 10px;
+  }
+  .progress-button {
+    background-color:rgb(217, 250, 217);
+    color: rgb(45, 6, 6);
+    border: none;
+    padding: 12px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  .edit-button {
+    background-color: #0fb503;
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .delete-button {
+    background-color: #f41832;
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .edit-button:hover {
+    background-color: #003872;
+  }
+  
+  .delete-button:hover {
+    background-color: #f71202;
+  }
+  
+  
+    // CourseUploadForm Component Styles
+    .course-upload-form {
+      background: #fff;
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      max-width: 600px;
+      margin: 2rem auto;
+    
+      h2 {
+        margin-bottom: 1.5rem;
+        font-size: 1.5rem;
+        color: #333;
+        text-align: center;
+      }
+    
+      form {
+        .form-group {
+          margin-bottom: 1.5rem;
+    
+          label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: bold;
+            color: #555;
+          }
+    
+          input,
+          textarea {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1rem;
+            transition: border-color 0.3s;
+    
+            &:focus {
+              border-color: #4CAF50;
+              outline: none;
+            }
+          }
+    
+          textarea {
+            resize: vertical;
+            min-height: 100px;
+          }
+        }
+    
+        .lesson-group {
+          position: relative;
+    
+          label {
+            margin-bottom: 0.5rem;
+            font-weight: bold;
+            color: #555;
+          }
+    
+          input {
+            width: calc(100% - 120px); // Adjusted width to accommodate the Remove button
+            margin-right: 10px;
+          }
+    
+          .remove-lesson-button {
+            position: absolute;
+            margin-top: 12px;
+            top: 50%;
+            right: 0;
+            transform: translateY(-50%);
+            background-color: #ff4d4d;
+            color: white;
+            border: none;
+            padding: 13px 18px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+    
+            &:hover {
+              background-color: #ff1a1a;
+            }
+          }
+        }
+    
+        .add-lesson-button {
+          background-color: #0873fe;
+          color: #fff;
+          border: none;
+          padding: 0.55rem 1rem;
+          font-size: 1rem;
+          border-radius: 5px;
+          cursor: pointer;
+          transition: background-color 0.3s;
+          margin-bottom: 1rem;
+          width: calc(30% - 3px); // Adjusted width and added margin for spacing
+    
+          &:hover {
+            background-color: #45A049;
+          }
+        }
+    
+        .submit-button {
+          background-color: #4CAF50;
+          color: #fff;
+          border: none;
+          padding: 0.75rem 0; // Full width button
+          font-size: 1rem;
+          border-radius: 5px;
+          cursor: pointer;
+          transition: background-color 0.3s;
+          width: 100%;
+          margin-top: 1rem; // Added margin to separate from lesson button
+    
+          &:hover {
+            background-color: #45A049;
+          }
+        }
+      }
+    }
+    
+    
+    // LoginForm Component Styles
+  .login-form {
+      max-width: 400px;
+      margin: 0 auto;
+      padding: 2rem;
+      background-color: #f9f9f9;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    
+      h2 {
+        margin-bottom: 1.5rem;
+        font-size: 1.5rem;
+        color: #333;
+        text-align: center;
+      }
+    
+      .form-group {
+        margin-bottom: 1.5rem;
+    
+        label {
+          display: block;
+          margin-bottom: 0.5rem;
+          font-weight: bold;
+          color: #555;
+        }
+    
+        input {
+          width: 100%;
+          padding: 0.75rem;
+          border: 1px solid #ddd;
+          border-radius: 5px;
+          font-size: 1rem;
+          transition: border-color 0.3s;
+    
+          &:focus {
+            border-color: #4CAF50;
+            outline: none;
+          }
+        }
+      }
+    
+      .error-message {
+        color: #ff4d4d;
+        margin-bottom: 1rem;
+        font-size: 0.875rem;
+      }
+    
+      button {
+        background-color: #4CAF50;
+        color: #fff;
+        border: none;
+        padding: 0.75rem 1.5rem;
+        font-size: 1rem;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+        width: 100%;
+    
+        &:hover {
+          background-color: #45A049;
+        }
+      }
+    }
+
+    // UserProfile Component Styles
+    .user-profile {
+      position: sticky;
+      top: 0;
+      background: #fff;
+      padding: 1rem;
+      border-bottom: 1px solid #ddd;
+      z-index: 1000; // Make sure it's above other elements
+    }
+    
+    .user-icon {
+      margin-right: 0.5rem;
+      vertical-align: middle;
+    }
+    .lesson-list {
+      h3 {
+        margin-bottom: 1rem;
+      }
+    
+      ul {
+        list-style: none;
+        padding: 0;
+    
+        li {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding: 0.5rem 0;
+          border-bottom: 1px solid #ddd;
+    
+          &.completed {
+            text-decoration: line-through;
+            color: gray;
+          }
+    
+          button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+    
+            &:hover {
+              background-color: #45A049;
+            }
+          }
+        }
+      }
+    }
+    
+    // CourseDetails Component Styles
+    .course-details {
+      margin: 2rem 0;
+      padding: 2rem;
+      background: #f9f9f9;
+      border-radius: 10px;
+    
+      h2 {
+        margin-bottom: 1rem;
+      }
+    
+      p {
+        margin: 0.5rem 0;
+      }
+    
+      h3 {
+        margin-top: 2rem;
+      }
+    
+      .progress-button {
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        padding: 0.5rem 1rem;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s, transform 0.3s;
+    
+        &:hover {
+          background-color: #45A049;
+          transform: scale(1.05);
+        }
+      }
+    }
+    
+    .lesson-list {
+      h3 {
+        margin-bottom: 1rem;
+      }
+    
+      ul {
+        list-style: none;
+        padding: 0;
+    
+        li {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding: 0.5rem 0;
+          border-bottom: 1px solid #ddd;
+    
+          &.completed {
+            text-decoration: line-through;
+            color: gray;
+          }
+    
+          button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+    
+            &:hover {
+              background-color: #45A049;
+            }
+          }
+        }
+      }
+    }
+
+    // Signup Component Styles
+    .logout-button {
+      background-color: #f83434; // Choose your desired color      background-color: #ffffff;
+      color: #ffffff;
+      margin:2%;
+      border: none;
+      padding: 0.5rem 1rem; /* Medium button size */
+      font-size: 1rem;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    
+      &:hover {
+        background-color: #E64A19; // Darken the color on hover
+      }
+    }
+    .signup-form-container {
+      max-width: 400px;
+      margin: 0 auto;
+      padding: 2rem;
+      background-color: #f9f9f9;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    
+    .signup-form-container h2 {
+      margin-bottom: 1.5rem;
+      font-size: 1.5rem;
+      color: #333;
+    }
+    
+    .form-group {
+      margin-bottom: 1.5rem;
+    }
+    
+    .form-group label {
+      display: block;
+      margin-bottom: 0.5rem;
+      font-weight: bold;
+      color: #555;
+    }
+    
+    input[type="text"],
+    input[type="email"],
+    input[type="password"] {
+      width: 100%;
+      padding: 0.75rem;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      font-size: 1rem;
+      transition: border-color 0.3s;
+    }
+    
+    input[type="text"]:focus,
+    input[type="email"]:focus,
+    input[type="password"]:focus {
+      border-color: #4CAF50;
+      outline: none;
+    }
+    
+    .signup-button-container {
+      text-align: center; /* Center the button horizontally */
+    }
+    
+    .signup-button {
+      background-color: #4CAF50;
+      color: #fff;
+      border: none;
+      padding: 0.5rem 1rem; /* Medium button size */
+      font-size: 1rem;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+      width: 100%;
+    }
+    .nav-button {
+      background-color: #ffffff;
+      color: #000000;
+      margin:2%;
+      border: none;
+      padding: 0.5rem 1rem; /* Medium button size */
+      font-size: 1rem;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+      
+    }
+    
+    .signup-button:hover {
+      background-color: #45A049;
+    }
+
+    // Edit Course Form Styles
+    .edit-course-form {
+      background-color: white;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      max-width: 500px;
+      margin: 0 auto;
+    }
+    
+    .form-title {
+      font-size: 24px;
+      color: #333;
+      margin-bottom: 20px;
+    }
+    
+    .form-group {
+      margin-bottom: 20px;
+    }
+    
+    .form-label {
+      font-size: 18px;
+      color: #555;
+    }
+    
+    .form-input,
+    .form-textarea {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 16px;
+      transition: border-color 0.3s;
+    }
+    
+    .form-input:focus,
+    .form-textarea:focus {
+      border-color: #4caf50;
+      outline: none;
+    }
+    
+    .save-button{
+      background-color: #4caf50;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 16px;
+      margin-right: 10px;
+      transition: background-color 0.3s;
+    }
+    .cancel-button {
+      background-color: #f70e1d;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 16px;
+      margin-right: 10px;
+      transition: background-color 0.3s;
+    }
+    
+    .save-button:hover{
+      background-color: #026c07;
+    }
+    .cancel-button:hover {
+      background-color: #ec4b0b;
+    }
+    .lesson-list {
+      margin-top: 20px;
+    }
+    
+    .lesson-cards {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+    
+    .lesson-card {
+      background-color: #ffffff;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+      padding: 20px;
+      width: calc(50% - 20px); /* Two cards per row */
+    }
+    
+    .lesson-card.completed {
+      background-color: #f8f8f8; /* Example background color for completed lessons */
+    }
+    
+    .lesson-title {
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+    
+    .lesson-card button {
+      background-color: #007bff;
+      color: #ffffff;
+      border: none;
+      border-radius: 4px;
+      padding: 8px 16px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+    
+    .lesson-card button:hover {
+      background-color: #0056b3;
+    }
+    .course-details {
+      padding: 20px;
+      width: 50%;
+      justify-content: center;
+      background-color: #f8f9fa;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      margin: auto; /* Center the container */
+    }
+    
+    .completed {
+      background-color: #f50d21;
+      color: #fff;
+      border: none;
+      padding: 8px 16px;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+    
+    .incomplete {
+      background-color: #57c204;
+      color: #fff;
+      border: none;
+      padding: 8px 16px;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+    
+    .course-details-title {
+      font-size: 24px;
+      color: #f21607;
+      margin-bottom: 10px;
+    }
+    
+    .course-details-description {
+      font-size: 16px;
+      color: #4141ef;
+      margin-bottom: 20px;
+      font-weight: bold;
+    }
+    
+    .lesson-section-title {
+      font-size: 20px;
+      color: #1d0505;
+      margin-bottom: 10px;
+    }
+    
+    .lesson-list {
+      list-style: none;
+      padding: 0;
+    }
+    
+    .lesson-item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 12px;
+    }
+    
+    .lesson-title {
+      font-size: 18px;
+      color: #333;
+      margin-right: 10px;
+    }
+    
+    .course-progress {
+      font-size: 16px;
+      color: #04b1f6;
+    }
+    
+    /* Media Query for responsiveness */
+    @media screen and (max-width: 768px) {
+      .course-details {
+        width: 80%; /* Adjust width for smaller screens */
+      }
+    }
+
+ 
+  
+    

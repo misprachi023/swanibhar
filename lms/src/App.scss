@@ -1,0 +1,16 @@
+@import './styles/variables';
+@import './styles/mixins';
+
+
+.app {
+  font-family: Arial, sans-serif;
+  .header {
+    background-color: $primary-color;
+    padding: 1rem;
+    text-align: center;
+    color: white;
+  }
+  .content {
+    padding: 2rem;
+  }
+}
