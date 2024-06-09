@@ -21,11 +21,11 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   }
   .course-item:nth-child(odd) {
-    background-color: #f7e7e7; /* Light gray background for odd items */
+    background-color: #f9f9f9; /* Light gray background for odd items */
   }
   
   .course-item:nth-child(even) {
-    background-color: #caf3f7; /* Lighter gray background for even items */
+    background-color: #f2fcfd; /* Lighter gray background for even items */
   }
   .course-info {
     cursor: pointer;
@@ -60,8 +60,8 @@
     transition: background-color 0.3s;
   }
   .edit-button {
-    background-color: #0fb503;
-    color: #fff;
+    background-color: #0dc1f3;
+    color: #f8f7f7;
     border: none;
     padding: 8px 16px;
     border-radius: 4px;
@@ -70,7 +70,7 @@
   }
   
   .delete-button {
-    background-color: #f41832;
+    background-color: #f4263e;
     color: #fff;
     border: none;
     padding: 8px 16px;
