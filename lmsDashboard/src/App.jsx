@@ -28,7 +28,7 @@ const App = () => {
           <UserProfile />
           <div className="content">
             <Routes>
-              <Route path="/" element={!isAuthenticated ? <CourseList /> : <Navigate to="/courses" />} />
+            <Route path="/" element={!isAuthenticated ? <Navigate to="/courses" />: <CourseList />} />
               <Route path="/login" element={<LoginForm />} />
               <Route path="/signup" element={<SignupForm />} />
               <Route path="/courses" element={!isAuthenticated ? <LoginForm/>: <CourseList />} />
